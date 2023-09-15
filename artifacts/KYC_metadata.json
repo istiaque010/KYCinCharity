@@ -1,0 +1,176 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_addUserReg",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_userAddress",
+						"type": "address"
+					}
+				],
+				"name": "approveKYC",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_userAddress",
+						"type": "address"
+					}
+				],
+				"name": "getKYCStatus",
+				"outputs": [
+					{
+						"internalType": "enum KYC.KYCStatus",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "kycRequests",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "userAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "userName",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "identificationDocument",
+						"type": "string"
+					},
+					{
+						"internalType": "enum KYC.KYCStatus",
+						"name": "status",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_userAddress",
+						"type": "address"
+					}
+				],
+				"name": "rejectKYC",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_userName",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_identificationDocument",
+						"type": "string"
+					}
+				],
+				"name": "submitKYCRequest",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"KYC.sol": "KYC"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": [],
+		"viaIR": true
+	},
+	"sources": {
+		"KYC.sol": {
+			"keccak256": "0xc4f09655ac064d10c9ddbd3a30e00cfdd18a6ea1fcab6d80a31800524d33aece",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://d2356c07877d997519d5ca0ea1ff8acb07418303311936195d761c8e742600b0",
+				"dweb:/ipfs/QmcdXRbiB9nPSRXdMpLuZhvYAs4AN27h6ZAoyeoaXtiygQ"
+			]
+		},
+		"userRegistration.sol": {
+			"keccak256": "0xedae67303cd6899f458e94144b249fe5674594e3bce02b38d34352c844f77a6f",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://aa4caa2acf0f958d59aa98b3467253b99dc526918e05530cf5bece900189f288",
+				"dweb:/ipfs/QmZzGQCzLHDghVopJsHFpZNbCpB5Z6uNxoQFba4pJ8kKrU"
+			]
+		}
+	},
+	"version": 1
+}

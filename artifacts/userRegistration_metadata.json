@@ -1,0 +1,429 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "userAddress",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "userID",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "fullName",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "email",
+						"type": "string"
+					}
+				],
+				"name": "UserRegistered",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "admin",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_userAddress",
+						"type": "address"
+					}
+				],
+				"name": "getUserInfo",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_userAddress",
+						"type": "address"
+					}
+				],
+				"name": "isUserRegistered",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_userID",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_fullName",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_dateOfBirth",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "_gender",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_userType",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_orgAddress",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_instituteRole",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_KYCstatus",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_userStatus",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_addressLine",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_phoneNumber",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_email",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_country",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_nationality",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_nid",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_maritalStatus",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_educationLevel",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_incomeLevel",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_employmentStatus",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_taxStatus",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_communicationPref",
+						"type": "string"
+					},
+					{
+						"internalType": "bool",
+						"name": "_consentPermission",
+						"type": "bool"
+					}
+				],
+				"name": "registerUser",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_newAdmin",
+						"type": "address"
+					}
+				],
+				"name": "transferAdmin",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "unregisterUser",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_email",
+						"type": "string"
+					}
+				],
+				"name": "updateUser",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "users",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "userAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "userID",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "fullName",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "dateOfBirth",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "gender",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "userType",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "orgAddress",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "instituteRole",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "KYCstatus",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "userStatus",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "addressLine",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "phoneNumber",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "email",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "country",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "nationality",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "nid",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "maritalStatus",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "educationLevel",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "incomeLevel",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "employmentStatus",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "taxStatus",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "communicationPref",
+						"type": "string"
+					},
+					{
+						"internalType": "bool",
+						"name": "consentPermission",
+						"type": "bool"
+					},
+					{
+						"internalType": "bool",
+						"name": "isRegistered",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"userRegistration.sol": "userRegistration"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": [],
+		"viaIR": true
+	},
+	"sources": {
+		"userRegistration.sol": {
+			"keccak256": "0xedae67303cd6899f458e94144b249fe5674594e3bce02b38d34352c844f77a6f",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://aa4caa2acf0f958d59aa98b3467253b99dc526918e05530cf5bece900189f288",
+				"dweb:/ipfs/QmZzGQCzLHDghVopJsHFpZNbCpB5Z6uNxoQFba4pJ8kKrU"
+			]
+		}
+	},
+	"version": 1
+}
