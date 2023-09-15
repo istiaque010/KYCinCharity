@@ -4,14 +4,12 @@ pragma solidity ^0.8.0;
 contract userRegistration {
     struct User {
         address userAddress;
-        string userID;
         string fullName;
         uint256 dateOfBirth;
         string gender;
         string userType;
         string orgAddress;
         string instituteRole;
-        string KYCstatus;
         string userStatus;
         string addressLine;
         string phoneNumber;
@@ -36,7 +34,7 @@ contract userRegistration {
     mapping(address => User) public users;
 
     // Event to notify when a new user registers
-    event UserRegistered(address indexed userAddress, string userID, string fullName, string email);
+    event UserRegistered(address indexed userAddress, string fullName, string email);
 
     // Modifier to restrict access to only the contract admin
     modifier onlyAdmin() {
@@ -56,14 +54,12 @@ contract userRegistration {
 
     // Function to register a new user
     function registerUser(
-        string memory _userID,
         string memory _fullName,
         uint256 _dateOfBirth,
         string memory _gender,
         string memory _userType,
         string memory _orgAddress,
         string memory _instituteRole,
-        string memory _KYCstatus,
         string memory _userStatus,
         string memory _addressLine,
         string memory _phoneNumber,
@@ -86,14 +82,12 @@ contract userRegistration {
 
         User memory newUser = User({
             userAddress: msg.sender,
-            userID: _userID,
             fullName: _fullName,
             dateOfBirth: _dateOfBirth,
             gender: _gender,
             userType: _userType,
             orgAddress: _orgAddress,
             instituteRole: _instituteRole,
-            KYCstatus: _KYCstatus,
             userStatus: _userStatus,
             addressLine: _addressLine,
             phoneNumber: _phoneNumber,
@@ -112,7 +106,7 @@ contract userRegistration {
         });
 
         users[msg.sender] = newUser;
-        emit UserRegistered(msg.sender, _userID, _fullName, _email);
+        emit UserRegistered(msg.sender, _fullName, _email);
     }
 
     // Rest of the contract remains unchanged.
